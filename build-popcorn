@@ -7,7 +7,7 @@
 
 installdir="/opt"
 nodeversion="0.9.2"
-version="release/rc-0.3.3"
+version="master"
 OfficialURL="http://popcorntime.io"
 gitURL="https://git.popcorntime.io/stash/plugins/servlet/archive/projects/PT/repos/popcorn-app?at=refs/heads"
 issueURL="https://git.popcorntime.io/jira"
