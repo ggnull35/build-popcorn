@@ -171,8 +171,10 @@ func_install() {
 [ "`echo $buildcommand | grep -v linux$arch`" ] && exit 0
 
 if [ "$1" != "-update" ] ; then
-read -p "Do you wish to install Popcorn-Time on this computer [y/n] ? "
-[ "$REPLY" != "y" ] && exit 0
+	read -p "Do you wish to install Popcorn-Time on this computer [y/n] ? " input
+	if [[ "${input}" != "y" ]] ; then 
+		exit 0
+	fi
 fi
 
 #clean .npm, dunno why that bugs
