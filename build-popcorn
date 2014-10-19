@@ -119,6 +119,7 @@ func_error
 
 #symlink libudev.so on 12.04 and 12.10
 [[ `lsb_release -sr` =~ "12.04"|"12.10" ]] && [ ! -e /lib/$(arch)-linux-gnu/libudev.so.1 ] && sudo ln -s /lib/$(arch)-linux-gnu/libudev.so.0 /lib/$(arch)-linux-gnu/libudev.so.1
+}
 
 func_build() {
 #get sources
