@@ -24,7 +24,7 @@ Open a terminal and type :
  - it brings a light CLI in /usr/bin
  - it creates a launcher in /usr/share/applications
 
- - it installs nodejs, bower and grunt-cli on your machine
+ - it installs nodejs, git, bower and grunt-cli on your machine
  - it uses a PPA (ppa:chris-lea/node.js) to get latest nodejs version
  - it symlinks libudev.so libraries (only on Ubuntu 12.04 and 12.10)
 
