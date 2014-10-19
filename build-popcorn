@@ -118,8 +118,7 @@ func_error
 [ ! -e /usr/bin/node ] && sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #symlink libudev.so on 12.04 and 12.10
-[[ `lsb_release -sr` =~ "12.04"|"12.10" ]] && [ ! -e /lib/$(arch)-linux-gnu/libudev.so.1 ] && sudo ln -s /lib/$(arch)-linux-gnu/libudev.so.0 /lib/$(arch)-linux-gnu/libudev.so.1 
-}
+[[ `lsb_release -sr` =~ "12.04"|"12.10" ]] && [ ! -e /lib/$(arch)-linux-gnu/libudev.so.1 ] && sudo ln -s /lib/$(arch)-linux-gnu/libudev.so.0 /lib/$(arch)-linux-gnu/libudev.so.1
 
 func_build() {
 #get sources
@@ -131,7 +130,7 @@ func_error
 
 #npm
 echo "- Running 'npm install'..."
-sudo chown -Rf $HOME/tmp $HOME/.npm
+sudo chown -Rf $USER:$USER $HOME/tmp $HOME/.npm
 npm install --yes &> $log && echo -e "  ...Ok !\n" || error=1
 func_error
 
