@@ -163,7 +163,7 @@ else
 fi
 
 echo -e "\n- Building with 'grunt'... This may take a few minutes"
-grunt css && grunt nodewebkit --platforms=$buildcommand && echo -e "   ...Ok !\n" || error=1
+grunt build --platforms=$buildcommand && echo -e "   ...Ok !\n" || error=1
 func_error
 
 echo -e "Popcorn-Time has been built in :\n  «$HOME/popcorn-app/build/releases/Popcorn-Time/»\n" 
